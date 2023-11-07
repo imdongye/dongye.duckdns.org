@@ -1,0 +1,22 @@
+/* 
+* {
+    font-family: "Spoqa Han Sans Neo"
+}
+body {
+    width: 40em;
+    text-align: center;
+    margin: 0 auto;
+}
+body>header {
+    background-color: #d3d3d3;
+    color:#202020;
+    font-size: 2em;
+    font-weight: bold;
+}
+body>main {
+    padding: 4px;
+}
+body>footer {
+    background-color: #d3d3d3;
+    color:#202020;
+} */

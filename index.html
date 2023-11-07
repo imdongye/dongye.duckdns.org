@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>dongye</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+    * {
+        font-family: "Spoqa Han Sans Neo";
+        box-sizing: border-box;
+    }
+    body {
+        background-color: rgb(83, 86, 89);
+        margin: 0 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        background-color: rgb(54, 54, 175);
+        color: white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.14);
+        position: relative;
+        z-index: 2;
+        padding: 0.5em 0.5em;
+        font-weight: 700;
+        font-size: 1.4em;
+    } 
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #main_left, #main_right {
+        flex-grow: 1;
+        flex-basis: 0;
+        flex-shrink: 0;
+        background-color: rgb(83, 86, 89);
+    }
+    #main_center {
+        background-color: white;
+        flex-grow: 0;
+        flex-shrink: 1;
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator */
+        box-shadow: 0 0 11px 1px rgba(0, 0, 0, 0.14);
+        position: relative;
+        z-index: 1;
+        overflow: auto;
+        flex-basis: 40em;
+    }
+    @media (min-width: 100em) {
+        #main_center {
+            flex-basis: 100em;
+        }
+    }
+    #main_contents {
+        padding: 1em 2em;
+    }
+    footer {
+        background-color: gray;
+        padding: 0 0.5em;
+        position: relative;
+        z-index: 1;
+    }
+    figure {
+        margin: 0;
+    }
+    figcaption {
+        margin-left: 0.3em;
+        margin-bottom: 1em;
+    }
+    p, a {
+        margin-top: 0.1em;
+        margin-bottom: 0.5em;
+    }
+    details {
+        display: inline-block;
+        border-radius: 4px;
+        padding: 0;
+        margin: 0.9em 0;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        background-color: rgb(227, 242, 230);
+        width: auto;
+        transition: 0.3s;
+    }
+    details > summary {
+        padding: 0.3em 0.5em;
+        border-radius: 4px;
+        background-color: rgb(1, 103, 4);
+        color: white;
+        font-weight: bold;
+    }
+    details > .content {
+        padding: 0.7em;
+    }
+    details[open] > summary {
+        border-radius: 4px 4px 0 0;
+    }
+    details[open] {
+        border-radius: 4px 4px 0 0;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    img, video, iframe {
+        width: 100%;
+    }
+</style>
+</head>
+
+<body>
+<header>
+    dongye.duckdns.org
+</header> 
+<main>
+<div id="main_left"></div>
+<div id="main_center">
+<div id="main_contents">
+    <p>안녕하세요 반갑습니다.</p>
+    <p><a href="./test.html">test html</a></p>
+
+    <figure>
+    <img src="images/kitty.jpg" width="560">
+    <figcaption>애기 오돌</figcaption>
+    </figure>
+    <figure>
+    <img src="images/rbpOnMyBed.jpg" width="560">
+    <figcaption>This page was responsed by a little RaspberryPi4(4GB) on my bed.</figcaption>
+    </figure>
+    <br><br><br><br><br><br><br>
+    <iframe height="315" src="https://www.youtube.com/embed/lra3hq0naVI?si=fJJmC-r6wYmBKmYh&amp;start=764" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br><br><br><br><br><br>
+    <video src="videos/odol.mp4" controls loop></video>
+    <br><br><br><br><br>
+    <audio src="audios/krBassRiff.mp3" controls></audio>
+    <audio src="audios/lostChildCover.mp3" controls></audio>
+    <br>
+    <details>
+        <summary>추천 유튜브</summary>
+        <div class="content">
+        <a href="https://www.youtube.com/@techdojang">테크도장</a><br>
+        <a href="https://www.youtube.com/watch?v=lkmVLg4u7RY&t=4s">빠니보틀 대만 여행</a>
+        </div>
+    </details><br>
+    <details>
+        <summary>추천 음악</summary>
+        <div class="content">
+        <a href="https://www.youtube.com/watch?v=Th-AqMvvBzE">The Smashing Pumpkins - Rocket</a><br>
+        <a href="https://youtu.be/4Oyp7UU9s-c?si=BRHtzNXkVIqQ8m5j">오리엔탈 디스코 특급</a>
+        </div>
+    </details><br>
+    <details>
+        <summary>추천 애니</summary>
+        <div class="content">
+        <p>메이드인 어비스</p>
+        <p>아바타아앙의 전설</p>
+        <p>하늘에서 음식이 내린다면</p>
+        </div>
+    </details><br>
+</div>
+</div>
+<div id="main_right"></div>
+</main>
+<footer>
+    imdongye @ ajou univ, 최초작성: 2023-11-5, 마지막수정: 2023-11-7
+</footer>
+</body>
+</html>
